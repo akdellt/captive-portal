@@ -1,35 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Video | Reconhecimento Facial com FaceAPI</title>
+    <title>Gestão de Rede Wi-Fi - UNDB</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <video
-        autoplay
-        id="cam"
-        width="720"
-        height="560"
-        muted
-    ></video>
+    <div class="login-container">
+        <div class="login-header">
+            <img src="assets/university-logo.png" alt="Universidade Logo" class="university-logo">
+            <h1>Gestão de Rede Wi-Fi</h1>
+            <p>Monitoramento de 7.000 dispositivos em 232 APs</p>
+        </div>
+        
+        <div class="login-body">
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="name">Nome completo</label>
+                    <input type="text" id="name" name="name" placeholder="Digite seu nome completo" required>
+                    <div class="error-message" id="name-error">Por favor, insira seu nome</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="matricula">Matrícula</label>
+                    <input type="matricula" id="matricula" name="matricula" placeholder="Digite sua matrícula" required>
+                    <div class="error-message" id="matricula-error">Por favor, insira sua matrícula</div>
+                </div>
+                
+                <button type="submit" class="login-button" id="login-button">Acessar a rede</button>
+            </form>
+        </div>
+        
+        <div class="login-footer">
+            <p>Problemas com acesso? <a href="suporte.html">Contate o suporte técnico</a></p>
+            <p>Sistema acadêmico v1.0 - © 2025</p>
+        </div>
+    </div>
 
-    <style>
-        body {
-        margin: 0;
-        padding: 0;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        }
+    <video id="cam" width="400" height="500" muted autoplay></video>
 
-        canvas {
-            position: absolute;
-        }
-    </style>
+    <script src="script.js"></script>
     <script src="./scripts/face-api.min.js"></script>
     <script src="./scripts/captura.js"></script>
 </body>

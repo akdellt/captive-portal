@@ -34,8 +34,9 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         
         if (validateForm()) {
+            const matricula = matriculaInput.value;
             cam.style.display = 'block';
-            faceAuth();
+            faceAuth(matricula);
         }
     });
 

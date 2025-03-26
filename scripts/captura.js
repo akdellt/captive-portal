@@ -37,7 +37,7 @@ const faceAuth = async (matricula) => {
         faceapi.nets.ssdMobilenetv1.loadFromUri('./models')
     ]);
 
-    const label = loadLabel(matricula);
+    const label = await loadLabel(matricula);
     if (!label) {
         alert("Matrícula ou imagem não existente.");
         return;

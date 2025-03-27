@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const loginForm = document.getElementById('loginForm');
+    
+    const loginContainer = document.querySelector('.login-container');
+
     const nameInput = document.getElementById('name');
     const matriculaInput = document.getElementById('matricula');
     const nameError = document.getElementById('name-error');
@@ -36,6 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (validateForm()) {
             const matricula = matriculaInput.value;
             cam.style.display = 'block';
+
+            loginContainer.style.display = 'none'; 
+
             faceAuth(matricula);
         }
     });
